@@ -9,7 +9,7 @@ let todos = loadTodos();
 todos.forEach(renderTodo);
 
 //COMPLETE TODOS
-ist.addEventListener("change", (e) => {
+list.addEventListener("change", (e) => {
   if (!e.target.matches("[data-list-item-checkbox]")) return;
 
   const parent = e.target.closest(".list-item");
