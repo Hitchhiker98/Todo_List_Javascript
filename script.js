@@ -35,12 +35,10 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const todoName = todoInput.value;
-  // guard clase to make sure that submitted todo input is not empty
   if (todoName === "") return;
   const newTodo = {
     name: todoName,
     complete: false,
-    //use milliseconds as a unique identifier.
     id: new Date().valueOf().toString(),
   };
   todos.push(newTodo);
@@ -62,6 +60,7 @@ function renderTodo(todo) {
 }
 
 //LOAD TODOS
+
 function loadTodos() {
   const todosString = localStorage.getItem(TODOS_STORAGE_KEY);
   //could use null coalescing operator here as well
